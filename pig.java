@@ -32,7 +32,9 @@ public class pig
         saying = saying.toLowerCase();
         String p = new String ();
         String temp = new String();
-    
+        
+        char tc=saying.charAt(0);
+        String ts= Character.toString(tc);
         int spaceNum=0;
         int startNum=0;
         int i = 0;
@@ -45,8 +47,8 @@ public class pig
                               temp = temp.concat("yay"); 
                               p= p.concat(temp);
                        } else {
-                       
-                               
+                               temp = temp.concat(ts); 
+                               temp = temp.concat("ay"); 
                        
                         }
                }
