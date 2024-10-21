@@ -33,8 +33,9 @@ public class pig
         String p = new String ();
         String temp = new String();
         
-        char tc=saying.charAt(0);
-        String ts= Character.toString(tc);
+        String temp2= new String();
+        temp2=saying; 
+        temp2=temp2.substring(0,1);
         int spaceNum=0;
         int startNum=0;
         int i = 0;
@@ -47,9 +48,9 @@ public class pig
                               temp = temp.concat("yay"); 
                               p= p.concat(temp);
                        } else {
-                               temp = temp.concat(ts); 
-                               temp = temp.concat("ay"); 
-                       
+                               p=saying.substring(1,ii);
+                               p=p.concat(temp2);
+                               p= p.concat("ay");
                         }
                }
         }
