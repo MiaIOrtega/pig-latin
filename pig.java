@@ -55,18 +55,28 @@ public class pig
                            p= p.concat(" ");   
                        } 
                        else
-                       {                               
+                       {           
+                           int w =i+1;
+                           if (temp.length()>w)
+                           {
                            i=ii-i-1;
                            temp2=temp.substring(1,i+1);
-                           System.out.println(temp2);
                            temp=temp.substring(0,1);
-                           System.out.println(temp);
                            p=p.concat(temp2);
                            p=p.concat(temp);
                            p= p.concat("ay");
                            p= p.concat(" ");
                            i=ii;
-                        
+                        }else{
+                            i=ii-i-1;
+                           temp2=temp.substring(1,i);
+                           temp=temp.substring(0,1);
+                           p=p.concat(temp2);
+                           p=p.concat(temp);
+                           p= p.concat("ay");
+                           p= p.concat(" ");
+                           i=ii;
+                        }
                         }
                 }
          }
