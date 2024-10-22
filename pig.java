@@ -40,35 +40,36 @@ public class pig
         temp=saying; 
         String temp2 = new String();
         
-        
         int startNum=0;
         int i = 0;
         int num= 0;
          for(int ii=0; ii<saying.length();ii++){
                if (saying.charAt(ii)==' '){
                        temp = saying.substring(startNum, ii);
-                       
                        startNum = ii+1; 
-                       if (temp.charAt(0) == 'a' || temp.charAt(0) == 'e' || temp.charAt(0) == 'i' || temp.charAt(0) == 'o' || temp.charAt(0) == 'u') {
-                              i=ii;
+                       if (temp.charAt(0) == 'a' || temp.charAt(0) == 'e' || temp.charAt(0) == 'i' || temp.charAt(0) == 'o' || temp.charAt(0) == 'u') 
+                       {
+                           i=ii;
                            p= p.concat(temp);
-                              p= p.concat("yay");
-                              p= p.concat(" ");
-                              
-                       } else {
-                               i=ii-i-1;
-                           temp2=temp.substring(1,i);
-                               temp=temp.substring(0,1);
-                               p=p.concat(temp2);
-                               p=p.concat(temp);
-                               p= p.concat("ay");
-                               p= p.concat(" ");
-                               i=ii;
+                           p= p.concat("yay");
+                           p= p.concat(" ");   
+                       } 
+                       else
+                       {                               
+                           i=ii-i-1;
+                           temp2=temp.substring(1,i+1);
+                           System.out.println(temp2);
+                           temp=temp.substring(0,1);
+                           System.out.println(temp);
+                           p=p.concat(temp2);
+                           p=p.concat(temp);
+                           p= p.concat("ay");
+                           p= p.concat(" ");
+                           i=ii;
+                        
                         }
-               }
-        }
-        System.out.println(p);
+                }
          }
+         System.out.println(p);
     }
-
-
+}
