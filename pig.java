@@ -35,9 +35,12 @@ public class pig
         //final
         String p = new String ();
         
+        
+        int q=0;
+        char result;
+        
         //temp changes
         String temp = new String();
-        temp=saying; 
         String temp2 = new String();
         
         int startNum=0;
@@ -56,27 +59,46 @@ public class pig
                        } 
                        else
                        {           
-                           int w =i+1;
-                           if (temp.length()>w)
-                           {
-                           i=ii-i-1;
-                           temp2=temp.substring(1,i+1);
-                           temp=temp.substring(0,1);
-                           p=p.concat(temp2);
-                           p=p.concat(temp);
-                           p= p.concat("ay");
-                           p= p.concat(" ");
-                           i=ii;
-                        }else{
-                            i=ii-i-1;
-                           temp2=temp.substring(1,i);
-                           temp=temp.substring(0,1);
-                           p=p.concat(temp2);
-                           p=p.concat(temp);
-                           p= p.concat("ay");
-                           p= p.concat(" ");
-                           i=ii;
-                        }
+                          
+                           boolean test=false;
+                     
+                           for (q=1;test!=true; q++){
+                               
+                                 
+                                if (temp.atChar(q)=='a'||temp.atChar(q)=='e'||temp.atChar(q)=='i'||temp.atChar(q)=='o'||temp.atChar(q)=='u' || temp.atChar(q)=='y'){
+                                    test=true;
+                                    break;
+                                }
+                            }
+                            
+                           System.out.println(q);
+                           
+                           
+                           /*
+                           
+                           if (temp.length()<w) {
+                           
+                               i=ii-i;
+                               temp2=temp.substring(q);
+                               temp=temp.substring(0,q);
+                               p=p.concat(temp2);
+                               p=p.concat(temp);
+                               p= p.concat("ay");
+                               p= p.concat(" ");
+                               i=ii;
+                               System.out.println(p);
+                            }else{
+                               i=ii-i;
+                               temp2=temp.substring(q);
+                               temp=temp.substring(0,q);
+                               p=p.concat(temp2);
+                               p=p.concat(temp);
+                               p= p.concat("ay");
+                               p= p.concat(" ");
+                               i=ii;
+                               System.out.println(p);
+                            }
+                            */
                         }
                 }
          }
